@@ -39,7 +39,7 @@ Rcpp::NumericVector run_shift(Rcpp::NumericVector x, Rcpp::IntegerVector i, Rcpp
         std::cout << "Initializing..." << std::endl;
         eigs.init();
         std::cout << "Computing..." << std::endl;
-        eigs.compute(Spectra::SortRule::SmallestMagn, 1000, 1e-20);
+        eigs.compute(Spectra::SortRule::SmallestMagn);
         std::cout << "Done!" << std::endl;
 
         std::cout << eigs.eigenvalues() << std::endl;

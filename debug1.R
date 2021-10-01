@@ -11,7 +11,7 @@
 #storage.mode(mat) <- "double"
 #
 #library(uwot)
-#debug(uwot:::spectral_init)
+#debug(uwot:::normalized_laplacian_init)
 #system.time(ref <- umap(mat, n_epochs=500, n_threads=1))
 
 library(Rcpp)
