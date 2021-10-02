@@ -37,6 +37,10 @@ Rcpp::NumericVector run_shift(Rcpp::NumericVector x, Rcpp::IntegerVector i, Rcpp
         eigs.init();
         eigs.compute(Spectra::SortRule::SmallestMagn);
 
+        if (eigs.info() != Spectra::CompInfo::Successful) {
+            std::cout << "FAILED!" << std::endl;
+        }
+
         std::cout << eigs.eigenvalues() << std::endl;
     }
 
@@ -48,6 +52,10 @@ Rcpp::NumericVector run_shift(Rcpp::NumericVector x, Rcpp::IntegerVector i, Rcpp
 
         eigs.init();
         eigs.compute(Spectra::SortRule::LargestMagn);
+
+        if (eigs.info() != Spectra::CompInfo::Successful) {
+            std::cout << "FAILED!" << std::endl;
+        }
 
         std::cout << eigs.eigenvalues() << std::endl;
     }
